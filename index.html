@@ -215,15 +215,14 @@ if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
 
             $('.add-row').click(function(e) {
                
-                var email= $("#email").val()
-                var atpos=email.indexOf("@");
-                var dotpos=email.lastIndexOf(".");
+                var x= $("#email").val()
+              var atpos=x.indexOf("@");
+            var dotpos=x.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
         {
-                alert("Not a valid e-mail address");
-               return false;
-       }
-
+       alert("Not a valid e-mail address");
+     return false;
+  }
   else {
 
 
