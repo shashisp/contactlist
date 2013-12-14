@@ -94,6 +94,7 @@
 
 					</thead>
 					<tbody id="content">
+            <div >
 	           <tr>
               <td>1</td>
               <td>Mr Darin</td>
@@ -121,7 +122,7 @@
               <td ></td>
               <td><a class="row-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
             </tr>
-					
+					</div>
 					</tbody>
                     <tfoot class="hide-if-no-paging">
                     <tr>
@@ -131,10 +132,12 @@
                     </tr>
                     </tfoot>
 				</table>
+            
+
 			</div>
 
             <a href="#" id="addform" class="btn btn-primary">+ Add New</a>
-            <a href="#" id="deleteall" class="btn btn-danger">x Delete All</a>
+            <a href="#" id="deleteall" class="btn btn-danger deleteall">x Delete All</a>
 
              <div id="addnew">
                 <h1>Add Contact</h1>
@@ -145,7 +148,7 @@
                   <label class="control-label" for="coname">Company Name</label>
                   <input type="text" class="form-control" placeholder="Company Name" id="coname">
                   <label class="control-label" for="email">Email</label>
-                  <input type="text" class="form-control" placeholder="Email" id="email">
+                  <input type="email" class="form-control" placeholder="Email" id="email">
                   <label class="control-label" for="cnum">Contact Number</label>
                   <input type="text" class="form-control" placeholder="98689-98689" id="cnum">
                   
@@ -165,11 +168,11 @@
             </script>
 
             <script type="text/javascript">
-             $(document).ready(function() { 
-             $("#deleteall").click(function(table) {
-        $(table).find('tbody > tr').not('.fooNewRecord').remove();
+             $(document).ready(function() {
+    $("#deleteall").on("click",function() {
+        $("#content").empty();
     });
-         });
+});
               
             </script>
 
